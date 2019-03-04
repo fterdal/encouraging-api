@@ -20,7 +20,7 @@ const pickRandom = (gifs) => {
   return gifs[Math.floor(Math.random() * gifs.length)]
 }
 
-app.use((req, res, next) => {
+app.get('/', (req, res, next) => {
   res.send(`
   <div>
     <img src="${pickRandom(encouragingGifs).url}"></img>

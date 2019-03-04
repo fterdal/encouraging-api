@@ -20,16 +20,20 @@ const pickRandom = (gifs) => {
   return gifs[Math.floor(Math.random() * gifs.length)]
 }
 
-app.get('/', (req, res, next) => {
-  res.send(`
-  <div>
-    <img src="${pickRandom(encouragingGifs).url}"></img>
-    <p>Check out the source code
-      <a href="https://github.com/fterdal/encouraging-api">here</a>
-    </p>
-  </div>
-  `)
+app.get('/', (req, res) => {
+  res.send('HELLO FROM HEROKU!')
 })
+
+// app.get('/', (req, res, next) => {
+//   res.send(`
+//   <div>
+//     <img src="${pickRandom(encouragingGifs).url}"></img>
+//     <p>Check out the source code
+//       <a href="https://github.com/fterdal/encouraging-api">here</a>
+//     </p>
+//   </div>
+//   `)
+// })
 
 const PORT = 80
 app.listen(PORT, () => {

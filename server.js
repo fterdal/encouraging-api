@@ -31,7 +31,7 @@ app.get('/', (req, res, next) => {
   `)
 })
 
-const PORT = 8888
+const PORT = 80
 app.listen(PORT, () => {
   console.log(`Encouraging on port ${PORT}`)
 })

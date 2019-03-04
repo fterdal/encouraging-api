@@ -20,10 +20,6 @@ const pickRandom = (gifs) => {
   return gifs[Math.floor(Math.random() * gifs.length)]
 }
 
-// app.get('/', (req, res) => {
-//   res.send('HELLO FROM HEROKU!')
-// })
-
 app.get('/', (req, res, next) => {
   res.send(`
   <div>

@@ -1,8 +1,8 @@
 const express = require('express')
-const volleyball = require('volleyball')
+// const volleyball = require('volleyball')
 const app = express()
 
-app.use(volleyball)
+// app.use(volleyball)
 
 // const encouragingGifs = [
 //   { url: 'https://media.giphy.com/media/12vJgj7zMN3jPy/giphy.gif' },
@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
 //   `)
 // })
 
-const PORT = 80
+const PORT = process.env.PORT || 8080
 app.listen(PORT, () => {
   console.log(`Encouraging on port ${PORT}`)
 })
